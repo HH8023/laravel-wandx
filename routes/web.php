@@ -11,6 +11,8 @@
 |
 */
 
+Route::post('/deploy','DeploymentController@deploy');
+
 Route::get('/', function () {
     return view('welcome');
 });
