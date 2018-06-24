@@ -11,11 +11,16 @@
 |
 */
 
-Route::post('/deploy','DeploymentController@deploy');
+Route::post('/deploy','DeploymentController@deploy');    //钩子
 
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', 'StaticPagesController@home');
-Route::get('/help', 'StaticPagesController@help');
-Route::get('/about', 'StaticPagesController@about');
+Route::get('/', 'StaticPagesController@home')->name('home');  //主页
+Route::get('/help', 'StaticPagesController@help')->name('help');  //帮助页
+Route::get('/about', 'StaticPagesController@about')->name('about');  //关于页
+
+Route::get('signup', 'UsersController@create')->name('signup');  //用户注册
+
+
+
