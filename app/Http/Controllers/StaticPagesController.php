@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class StaticPagesController extends Controller
 {
@@ -27,6 +28,6 @@ class StaticPagesController extends Controller
      */
     public function about()
     {
-        return view('static_pages/about');
+       return view('static_pages/about');
     }
 }
